@@ -77,8 +77,8 @@
 param(
     [Parameter(Mandatory = $False)][ValidateSet("1903", "1909", "2004", "20H2", "21H1", "21H2", "22H2")]
     [System.String] $Windows10Version = "22H2",
-    [Parameter(Mandatory = $False)][ValidateSet("21H2", "22H2")]
-    [System.String] $Windows11Version = "22H2",
+    [Parameter(Mandatory = $False)][ValidateSet("21H2", "22H2", "23H2")]
+    [System.String] $Windows11Version = "23H2",
     [Parameter(Mandatory = $False)]
     [System.String] $WorkingDirectory = $null,
     [Parameter(Mandatory = $False)]
@@ -164,7 +164,7 @@ function Get-WindowsAdmxDownloadId
         }
         11
         {
-            return (@( @{ "21H2" = "103507" }, @{ "22H2" = "104593" } ).$WindowsVersion)
+            return (@( @{ "21H2" = "103507" }, @{ "22H2" = "104593" }, @{ "23H2" = "105667" } ).$WindowsVersion)
             break
         }
     }
